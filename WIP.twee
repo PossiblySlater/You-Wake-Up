@@ -1,0 +1,280 @@
+:: StoryTitle
+WIP
+
+
+:: StoryData
+{
+  "ifid": "8F8863A2-E3EE-4435-BF49-5E8BBF30A192",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Begin",
+  "zoom": 1
+}
+
+
+:: Begin {"position":"1000,400","size":"100,100"}
+(set: $hasHammer to false)
+(set: $darknessWalked to 1)
+(set: $fourthWall to false)
+[[PossiblySlater presents...|You Wake Up]]
+
+
+:: Break window with hammer {"position":"700,700","size":"100,100"}
+You break the window.
+[[Crawl through window]]
+[[Enter hallway|Enter hallway 2]]
+
+
+:: Crawl through {"position":"200,700","size":"100,100"}
+You push through the fabric. There's a pulsating sound, and a feeling like you're not supposed to be here.
+(text-colour:red)[[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]]
+[[Keep going]]
+
+
+:: Crawl through window {"position":"600,700","size":"100,100"}
+You crawl through the windowframe.
+It's just darkness.
+(set:$darknessWalked to 0)
+[[Walk into the dark]]
+[[Turn around|Enter hallway 2]]
+
+
+:: Enter hallway {"position":"1225,975","size":"100,100"}
+You stumble into the hallway. It feels darker and colder than the room. You hear cluttering from the other side of the hallway. There are doors to the left and right of you.
+[[Look in the left door]]
+[[Look in the right door]]
+[[Go back to the room]]
+[[Walk to the end of the hallway]]
+
+
+:: Enter hallway 2 {"position":"925,875","size":"100,100"}
+Now that you've had your fun, you re-enter the hallway.
+[[Walk to the end of the hallway]] 
+[[Look in the left door]] 
+[[Look in the right door]]
+
+
+:: Get up from bed {"position":"1225,775","size":"100,100"}
+There are needles inserted into your arms. It's a hospital bed. You get up and rip off the medical equipment.
+There is a (if:$fourthWall is true)[boarded up] window and a hallway.
+(if:$fourthWall is false)[[Inspect window]]
+[[Enter hallway]]
+
+
+:: Go back to the room {"position":"1400,950","size":"100,100"}
+You're back in the room you woke up in.
+[[Inspect window]] 
+[[Enter hallway]]
+
+
+:: Grab the hammer {"position":"1000,1150","size":"100,100"}
+You grab the hammer.
+(set: $hasHammer to true)
+[[Enter hallway]]
+
+
+:: Inspect window {"position":"1025,800","size":"100,100"}
+You attempt to peer outside the window, but there's nothing but darkness beyond. It's not blocked by something, but it feels like sheer emptiness.
+[[Enter hallway]]
+(if: $hasHammer is true)[[Break window with hammer]]
+
+
+:: Keep going {"position":"100,700","size":"100,100"}
+Your nose is bleeding, and your head hurts.
+(text-style:"bold","blur")[//''(text-colour:red)[[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]]''//]
+[[Keep going|Keep going 2]]
+
+
+:: Keep going 2 {"position":"0,700","size":"100,100"}
+(text-style:"buoy")[''Stop.''
+](text-style:"smear","shudder")[(text-style:"bold","blur")[//''(text-colour:red)[[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]]''//]]
+[[Keep going|Keep going 3]]
+
+
+:: Keep going 3 {"position":"0,800","size":"100,100"}
+[(text-colour:red)[(text-style:"smear","tall","fidget")[''S̴̲̞̖͕̖̭̐̀͛̾̀t̶͚͇͈̽̏ͅó̷͚̓͆̽ṕ̸͕͍̰͍͖̤̻́.̶̜̜̯́̍̇̒́͠''']]]
+(text-style:"smear","shudder")[(text-style:"bold","blur")[//''(text-colour:red)[[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]
+[[Leave|Enter hallway 2]]]''//]]
+[[Keep going|Keep going 3.5]]
+
+
+:: Keep going 3.5 {"position":"0,900","size":"100,100"}
+[[...|Narrator 1]]
+
+
+:: Keep sleeping {"position":"1375,600","size":"100,100"}
+Despite the state of confusion and horror your mind is in, you drift back asleep because you're too lazy to do anything about it.
+[[Wake up|You Wake Up]]
+
+
+:: Look in the left door {"position":"1000,1025","size":"100,100"}
+You slowly open the door to your left. It's an empty hospital room.
+(if: $hasHammer is False)[There is a hammer on the bedside table.]
+[[Enter hallway]] 
+(if: $hasHammer is False)[[Grab the hammer]]
+
+
+:: Look in the right door {"position":"1375,1175","size":"100,100"}
+The door is locked.
+[[Walk to the end of the hallway]] 
+[[Look in the left door]]
+[[Go back to the room]]
+
+
+:: Narrator 1 {"position":"0,1000","size":"100,100"}
+(text-colour:magenta)[
+(set: $typewriterText to "You idiot.
+
+I told you to stop.
+
+Now look what's happened.
+
+You've ruined it all.
+
+You've broken my perfect game.
+
+All because you're too stubborn to turn around.
+
+Well, I congratulate you.
+
+Now leave.")
+{
+  (set: $typewriterPos to 1)
+  |typewriterOutput>[]
+  <!-- Set a delay of 20ms seconds per loop -->
+  (live: 150ms)[
+      <!-- Add the next character to the hook -->
+      (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
+
+      <!-- Update the position -->
+      (set: $typewriterPos to it + 1)
+
+      <!-- If it's gone past the end, stop -->
+      (if: $typewriterPos is $typewriterText's length + 1)[
+        (stop:)
+      ]
+    ]
+}
+]
+(set: $fourthWall to true)
+[[...|You Wake Up]]
+
+
+:: Rip it more {"position":"300,700","size":"100,100"}
+You tear it open. You can crawl through.
+[[Crawl through]]
+[[Leave|Enter hallway 2]]
+
+
+:: Tear the fabric {"position":"400,700","size":"100,100"}
+You plant your hands on opposing sides of the puncture in the fabric. You rip it open. As you open it, the light gets brighter and a whining noise ensues.
+[[Rip it more]]
+[[Leave|Enter hallway 2]]
+
+
+:: Untitled Passage 1 {"position":"1525,325","size":"100,100"}
+You Wake Up. a
+
+
+:: Walk into the dark {"position":"500,700","size":"100,100"}
+You continue forward into the darkness.
+(if:$darknessWalked is < 3)[Still nothing.]
+(if:$darknessWalked is 3)[You see a light.]
+(if:$darknessWalked is 4)[It's almost like a hole, in fabric, with light peeking through]
+(if:$darknessWalked is 5)[You look at the hole closer. You can rip it open. ]
+(set: $darknessWalked to $darknessWalked + 1)
+[[Turn around|Enter hallway 2]]
+(if:$darknessWalked is < 6)[[Keep walking|Walk into the dark]]
+(if:$darknessWalked is 6)[[Tear the fabric]]
+
+
+:: Walk to the end of the hallway {"position":"1150,1175","size":"100,100"}
+Hey! This part isn't done yet, cause i'm slow at making games
+go ahead and [[turn around.|Go back to the room]]
+
+
+:: You Wake Up {"position":"1225,625","size":"100,100"}
+You wake up in a bed that isn't yours. You're in an unfamiliar room.
+[[Get up from bed]]
+[[Keep sleeping]]
