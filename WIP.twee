@@ -8,15 +8,37 @@ WIP
   "format": "Harlowe",
   "format-version": "3.3.9",
   "start": "Begin",
+  "tag-colors": {
+    "Ending": "red"
+  },
   "zoom": 1
 }
+
+
+:: \ Hallway 2 {"position":"1625,1050","size":"100,100"}
+You're back in the hallway. You hear cluttering from the other side of the hallway. There are doors to the left and right of you.
+[[Look in the left door]]
+[[Look in the right door]]
+[[Go back to the room]]
+[[Walk to the end of the hallway]]
+
+
+:: Ask where you are {"position":"1050,1425","size":"100,100"}
+Under construction
 
 
 :: Begin {"position":"1000,400","size":"100,100"}
 (set: $hasHammer to false)
 (set: $darknessWalked to 1)
 (set: $fourthWall to false)
-[[PossiblySlater presents...|You Wake Up]]
+(set: $endings to 1)
+PossiblySlater presents:
+
+''(text-colour:(hsl:180,0.8039,0.5,0.85))[You Wake Up
+]''
+Remember, any decision can lead you down a completely different path. 
+
+[[Begin |You Wake Up]]
 
 
 :: Break window with hammer {"position":"700,700","size":"100,100"}
@@ -55,7 +77,7 @@ It's just darkness.
 [[Turn around|Enter hallway 2]]
 
 
-:: Enter hallway {"position":"1225,975","size":"100,100"}
+:: Enter hallway {"position":"1225,925","size":"100,100"}
 You stumble into the hallway. It feels darker and colder than the room. You hear cluttering from the other side of the hallway. There are doors to the left and right of you.
 [[Look in the left door]]
 [[Look in the right door]]
@@ -202,7 +224,7 @@ The door is locked.
 [[Go back to the room]]
 
 
-:: Narrator 1 {"position":"0,1000","size":"100,100"}
+:: Narrator 1 [Ending] {"position":"0,1000","size":"100,100"}
 (text-colour:magenta)[
 (set: $typewriterText to "You idiot.
 
@@ -223,7 +245,7 @@ Now leave.")
   (set: $typewriterPos to 1)
   |typewriterOutput>[]
   <!-- Set a delay of 20ms seconds per loop -->
-  (live: 150ms)[
+  (live: 75ms)[
       <!-- Add the next character to the hook -->
       (append: ?typewriterOutput)[(print: $typewriterText's $typewriterPos)]
 
@@ -240,11 +262,42 @@ Now leave.")
 (set: $fourthWall to true)
 [[...|You Wake Up]]
 
+ś̷̢̘͇a̴͚̋ȩ̸̜͍͙̔f̵̘͍͓̉̔̇̕ͅḧ̶̳́͌̐̽͋͝e̵̡̥̗̱̿̍̈̈͂̄r̶̭̱̽̏̀ (2/$endings)
+
+
+
+
+:: Open the door {"position":"1050,1300","size":"100,100"}
+You throw open the door, and you find two people standing by a water cooler. They're talking about quarterly earnings.
+
+[[Ask where you are]]
+[[Walk away]]
+[[Scream]]
+
 
 :: Rip it more {"position":"300,700","size":"100,100"}
 You tear it open. You can crawl through.
 [[Crawl through]]
 [[Leave|Enter hallway 2]]
+
+
+:: Scream [Ending] {"position":"1225,1400","size":"100,100"}
+You scream extremely loudly. The duo jumps.
+
+''(text-colour:cyan)[Dude, what are you doing?]
+
+(text-colour:orange)[Why are you in the broom closet?]''
+
+You look behind you. It's a boring broom closet.
+
+You must've fallen asleep.
+
+[[Back to the beginning |Begin]]
+
+Broom Closet Ending (1 out of $endings)
+
+(set: $completedEndings to $completedEnding + 1)
+
 
 
 :: Tear the fabric {"position":"400,700","size":"100,100"}
@@ -253,8 +306,8 @@ You plant your hands on opposing sides of the puncture in the fabric. You rip it
 [[Leave|Enter hallway 2]]
 
 
-:: Untitled Passage 1 {"position":"1525,325","size":"100,100"}
-You Wake Up. a
+:: Walk away {"position":"925,1425","size":"100,100"}
+Under construction
 
 
 :: Walk into the dark {"position":"500,700","size":"100,100"}
@@ -270,8 +323,9 @@ You continue forward into the darkness.
 
 
 :: Walk to the end of the hallway {"position":"1150,1175","size":"100,100"}
-Hey! This part isn't done yet, cause i'm slow at making games
-go ahead and [[turn around.|Go back to the room]]
+You slowly walk to the door at the end of the hallway. Light peeks through a slightly opened door.
+[[Open the door]]
+[[Retreat | Hallway 2]]
 
 
 :: You Wake Up {"position":"1225,625","size":"100,100"}
